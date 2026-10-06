@@ -1,0 +1,230 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "collapsed_sections": [
+        "JseHSdeFGE04",
+        "8wIyzax9q7JF",
+        "RGlwZaXQrAfd",
+        "JCG1FflCrJRE",
+        "GO6FXmgxlSJ0"
+      ]
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/enikolaev/IT-and-Programming/blob/main/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_01.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Лабораторная работа 1. Принципы разработки программ"
+      ],
+      "metadata": {
+        "id": "C3DZeo7xi2HL"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Цель, содержание и персональная информация о себе"
+      ],
+      "metadata": {
+        "id": "JseHSdeFGE04"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Цель работы: освоение базового синтаксиса Python, функций `type()` и `print()`.\n\n",
+        "Студент: Данилов Артем Алексеевич\n",
+        "Группа: ИНБ-б-о-26-1(2)\n"
+      ],
+      "metadata": {
+        "id": "8ruDCs-dGE05"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Задание"
+      ],
+      "metadata": {
+        "id": "8wIyzax9q7JF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Вариант 10. Вычислить выражение:\n",
+        "$$R\\_x = a \\cdot b + \\frac{b}{t} - x + f \\cdot i\\_2$$\n\n",
+        "Вывести значения и типы всех переменных."
+      ],
+      "metadata": {
+        "id": "A1UMdzQGjFix"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Анализ выражения и определение переменных"
+      ],
+      "metadata": {
+        "id": "RGlwZaXQrAfd"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Входные переменные: $a, b, t, x, f, i\\_2$. Вычисляемая переменная: $R\\_x$."
+      ],
+      "metadata": {
+        "id": "dusmGf0PoHeU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "GRcewQyGh7dD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a =  5 , type(a) =  <class 'int'>\n",
+            "b =  12 , type(b) =  <class 'int'>\n",
+            "t =  4 , type(t) =  <class 'int'>\n",
+            "x =  3.5 , type(x) =  <class 'float'>\n",
+            "f =  2.0 , type(f) =  <class 'float'>\n",
+            "i_2 =  8 , type(i_2) =  <class 'int'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = 5\n",
+        "b = 12\n",
+        "t = 4\n",
+        "x = 3.5\n",
+        "f = 2.0\n",
+        "i_2 = 8\n",
+        "print(\"a = \", a, \", type(a) = \", type(a))\n",
+        "print(\"b = \", b, \", type(b) = \", type(b))\n",
+        "print(\"t = \", t, \", type(t) = \", type(t))\n",
+        "print(\"x = \", x, \", type(x) = \", type(x))\n",
+        "print(\"f = \", f, \", type(f) = \", type(f))\n",
+        "print(\"i_2 = \", i_2, \", type(i_2) = \", type(i_2))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Вычисление выражения, печать результатов"
+      ],
+      "metadata": {
+        "id": "JCG1FflCrJRE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Расчет $R\\_x$:"
+      ],
+      "metadata": {
+        "id": "9ky-Ji8ppVb9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "R_x = a * b + b / t - x + f * i_2\n",
+        "print('R_x = ', R_x)\n",
+        "print('Type of R_x: ', type(R_x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v5SpmCokphuJ"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "R_x =  75.5\n",
+            "Type of R_x:  <class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Использованы функции: `print()`, `type()`."
+      ],
+      "metadata": {
+        "id": "QgydWXtBqRUl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Контрольные вопросы"
+      ],
+      "metadata": {
+        "id": "GO6FXmgxlSJ0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "1. Компилируемые перекладывают код в машинный перед запуском. Интерпретируемые выполняют код построчно во время работы.\n\n",
+        "2. C, C++, Rust, Go, Pascal.\n\n",
+        "3. Python, JS, PHP, Ruby, Bash.\n\n",
+        "4. имя = значение.\n\n",
+        "5. Вызовом `type(переменная)`.\n\n",
+        "6. Вывод данных в консоль.\n\n",
+        "7. Встроенная `abs()`. Библиотеки не требуются.\n\n",
+        "8. `int`, `create-var`, `4perem`, `System.Double`.\n\n",
+        "9. `int`, `float`, `bool`, `str`, `list`, `tuple`, `dict`, `set`, `NoneType`.\n\n",
+        "10. Утилита.\n\n",
+        "11. Прикладное ПО.\n\n",
+        "12. 1 байт.\n\n",
+        "13. Двоичная.\n\n",
+        "14. Кодирование базовых латинских символов и команд в числа.\n\n",
+        "15. Unicode.\n\n",
+        "16. Цифровые данные 0 и 1. Цифровое устройство - аппарат для работы с ними.\n\n",
+        "17. Машинный код.\n\n",
+        "18. ОЗУ.\n\n",
+        "19. Командный цикл.\n\n",
+        "20. Читаемый текст машинных инструкций.\n"
+      ],
+      "metadata": {
+        "id": "RzImVkqPlSJ0"
+      }
+    }
+  ]
+}
